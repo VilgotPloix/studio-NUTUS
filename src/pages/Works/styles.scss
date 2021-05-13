@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+$font:  'Montserrat', sans-serif;
+
+$black: #3d405b;
+$white: #edf2f4;
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.workPage
+{
+    width: 100%;
+    height: calc(100vh - 51px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.workPage.light
+{
+    background-color: $white;
+}
+
+.workPage.dark
+{
+    background-color: $black;
+}
+
+.workLink
+{
+    font-family: $font;
+    font-size: 2em;
+    color: $black;
+
+    &:hover
+    {
+        color: grey;
+    }
+}
+
+.workLink.light
+{
+    color: $white;
+}

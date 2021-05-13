@@ -10,6 +10,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home/index'
 import Works from './pages/Works/index'
 import About from './pages/About/index'
+import DetailPage from './pages/DetailPage/index'
 
 import ThemeContextProvider from './data/ThemeContext'
 
@@ -25,11 +26,14 @@ export default function App() {
               <Route path="/" exact>
                 <Home />
               </Route>
-              <Route path="/works">
+              <Route path="/works" exact>
                 <Works />
               </Route>
               <Route path='/about'>
                 <About />
+              </Route>
+              <Route path='/works/:slug'>
+                <DetailPage />
               </Route>
             </Switch>
           </main>
