@@ -17,6 +17,7 @@ export default function index() {
         setCurrentWork(foundWork)
     }, [slug])
 
+    
 
     return (
         <div className={theme.state ? "detailPage light" : "detailPage dark"}>
@@ -31,7 +32,9 @@ export default function index() {
             >{currrentWork === undefined ? "" : currrentWork.plot}</p>
             <button
                 className={theme.state ? "visitBtn" : "visitBtn light"}
-            >visiter le site</button>
+            ><a
+                className={theme.state ? "extLink dark" : "extLink light"}
+            href={currrentWork === undefined ? "" : currrentWork.website}>visiter le site</a></button>
         </div>
     )
 }

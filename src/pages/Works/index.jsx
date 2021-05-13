@@ -11,15 +11,16 @@ export default function index() {
     const theme = useContext(ThemeContext)
 
     const projets = works.map((projet, index) => 
-        <Link 
-        onMousemove={(e) => console.log(e.screenX + e.screenY)}
-        className={theme.state ? "workLink" : "workLink light"}
-         key={index} to={"/works/" + projet.name}>{projet.name}</Link>
+        <div key={index} >
+            <Link
+                className={theme.state ? "workLink" : "workLink light"}
+                to={"/works/" + projet.name}>{projet.name}</Link>
+        </div>
     )
 
     return (
         <div className={theme.state ? "workPage light" : "workPage dark"}>
-            {projets}
+            {projets} 
         </div>
     )
 }

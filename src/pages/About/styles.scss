@@ -50,3 +50,31 @@ $white: #edf2f4;
 {
     color: $white;
 }
+
+.btnMail
+{
+    width: 150px;
+    height: 40px;
+    border: none;
+    background-color: $black;
+    color: $white;
+    font-family: $font;
+    font-size: 1.2em;
+    border-radius: 10px 0px 10px 0px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 25px;
+    cursor: pointer;
+
+    &:hover
+    {
+        border-radius: 0px 10px 0px 10px;
+    }
+}
+
+.btnMail.light
+{
+    background-color: $white;
+    color: $black;
+}
