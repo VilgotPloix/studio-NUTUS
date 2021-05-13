@@ -1,0 +1,89 @@
+$font:  'Montserrat', sans-serif;
+
+$black: #3d405b;
+$white: #edf2f4;
+
+*
+{
+    transition: all 0.2s ease-in-out;
+}
+
+.page
+{
+    width: 100%;
+    height: calc(100vh - 51px);
+}
+
+.page.light
+{
+    background-color: $white;
+}
+
+.page.dark
+{
+    background-color: $black;
+}
+
+.center
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title
+{
+    font-family: $font;
+    font-size: 2.5em;
+    font-weight: 100;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}
+
+.title.light
+{
+    color: $white;
+}
+
+.paragraph
+{
+    font-family: $font;
+    font-size: 1.2em;
+    width: 600px;
+    text-align: center;
+}
+
+.paragraph.light
+{
+    color: $white;
+}
+
+.cta
+{
+    width: 200px;
+    height: 45px;
+    font-family: $font;
+    font-size: 1em;
+    font-weight: 600;
+    border: none;
+    background-color: $black;
+    color: $white;
+    border-radius: 10px 0px 10px 0px;
+    margin-top: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    &:hover
+    {
+        border-radius: 0px 10px 0px 10px;
+    }
+}
+
+.cta.light
+{
+    background-color: $white;
+    color: $black;
+}

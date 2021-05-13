@@ -1,0 +1,156 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+$font:  'Montserrat', sans-serif;
+
+$black: #3d405b;
+$white: #edf2f4;
+
+
+
+nav
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.nav
+{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav.light
+{
+    background-color: $white;
+}
+
+.nav.dark
+{
+    background-color: $black;
+}
+
+.navTitle
+{
+    font-family: $font;
+    font-size: 2em;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+}
+
+.navTitle.light
+{
+    color: $white;
+}
+
+.nutus
+{
+    display: inline;
+    position: relative;
+}
+
+.nutus::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 13px;
+    width: 88px;
+    height: 1px;
+    background-color: white;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.nutus:hover::after
+{
+    transform: scale(1);
+    background-color: red;
+}
+
+.navLink
+{
+    font-family: $font;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.navLink.light
+{
+    color: $white;
+}
+
+.navLink::after
+{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 12px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.navLink:hover::after
+{
+    transform: scale(1);
+    background-color: red;
+}
+
+.navLink:focus::after
+{
+    transform: scale(1);
+    background-color: red;
+}
+
+.toggleBtn
+{
+    width: 10px;
+    height: 51px;
+    border: none;
+    position: absolute;
+    right: 0px;
+    bottom: 0.5px;
+    transition: all 0.2s ease-in-out;
+    font-family: $font;
+    font-weight: 600;
+}
+
+.toggleBtn:hover
+{
+    width: 35px;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.toggleBtn.light
+{
+    background-color: $black;
+    color: $black;
+    
+    &:hover
+    {
+        color: $white;
+    }
+}
+.toggleBtn.dark
+{
+    background-color: $white;
+    color: $white;
+
+    &:hover
+    {
+        color: $black;
+    }
+}
